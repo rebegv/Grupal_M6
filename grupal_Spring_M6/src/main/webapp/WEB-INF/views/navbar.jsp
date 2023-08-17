@@ -18,6 +18,12 @@
           <a class="nav-link" href="listarCapacitaciones">Listar Capacitaciones</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="crearUsuario">Crear Usuario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="listarUsuarios">Listar Usuarios</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="contacto">Contacto</a>
         </li>
       </ul>

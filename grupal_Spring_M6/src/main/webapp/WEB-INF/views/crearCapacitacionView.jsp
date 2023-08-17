@@ -1,5 +1,5 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <head>
@@ -19,7 +19,7 @@
             Formulario para Crear Capacitación
         </h2>
     </div>
-    <form action="guardarCapacitacion" method="POST" id="crearCapacitacionForm">
+    <form action="<c:url value='/guardarCapacitacion' />" method="POST" id="crearCapacitacionForm">
         <div class="mb-3 row">
             <label for="rutCliente" class="col-sm-2 col-form-label">Rut Cliente</label>
             <div class="col-sm-10">

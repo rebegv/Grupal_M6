@@ -1,4 +1,4 @@
-<%@ page import="com.example.modulo6.models.Capacitacion" %>
+<%@ page import="com.example.modulo6.models.Usuario" %>
 <%@ page import="java.util.List" %>
 <%@ page language="java" pageEncoding="UTF-8"%>
 
@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>Lista de Capacitaciones</title>
+    <title>Lista de Usuarios</title>
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 
 <div class="text-center my-5">
     <h2>
-        Lista de Capacitaciones
+        Lista de Usuarios
     </h2>
 </div>
 
@@ -24,34 +24,26 @@
     <table class="table table-dark table-hover ms-3 me-3">
         <thead>
         <tr>
-            <th scope="col">Rut Cliente</th>
-            <th scope="col">Dia</th>
-            <th scope="col">Hora</th>
-            <th scope="col">Lugar</th>
-            <th scope="col">Duración</th>
-            <th scope="col">Cantidad de Asistentes</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo de Usuario</th>
         </tr>
         </thead>
         <tbody>
         <%
-            List<Capacitacion> capacitaciones = (List<Capacitacion>) request.getAttribute("listaCapacitaciones");
-            if(capacitaciones != null && !capacitaciones.isEmpty()) {
-                for (Capacitacion c : capacitaciones) {
+            List<Usuario> usuarios = (List<Usuario>) request.getAttribute("listaUsuarios");
+            if(usuarios != null && !usuarios.isEmpty()) {
+                for (Usuario u : usuarios) {
         %>
         <tr>
-            <td><%= c.getRutCliente()%></td>
-            <td><%= c.getDia()%></td>
-            <td><%= c.getHora()%></td>
-            <td><%= c.getLugar()%></td>
-            <td><%= c.getDuracion()%></td>
-            <td><%= c.getCantAsistentes()%></td>
+            <td><%= u.getNombre() %></td>
+            <td><%= u.getTipo() %></td>
         </tr>
         <% }
         } else {
         %>
         <tr>
-            <td colspan="7" class="text-center">
-                <h3>No hay capacitaciones</h3>
+            <td colspan="3" class="text-center">
+                <h3>No hay usuarios</h3>
             </td>
         </tr>
         <% } %>
